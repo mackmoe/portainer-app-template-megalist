@@ -1,0 +1,1 @@
+# portainer-app-template-megalist
