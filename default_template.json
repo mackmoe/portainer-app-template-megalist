@@ -31,6 +31,23 @@
           "container": "/var/lib/wowza"
       }]
     },
+	{
+		"categories": [
+			"docker-tools,admin"
+		],
+		"description": "A container-based solution for automating Docker container base image updates.",
+		"image": "containrrr/watchtower",
+		"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/watchtower.png",
+		"platform": "linux",
+		"title": "Watchtower",
+		"type": 1,
+		"volumes": [
+			{
+				"container": "/var/run/docker.sock",
+				"host": "/var/run/docker.sock"
+			}
+		]
+	},
     {
       "categories": [
           "search-engine"
