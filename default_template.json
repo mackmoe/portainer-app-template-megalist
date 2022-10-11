@@ -33,36 +33,6 @@
     },
     {
       "categories": [
-          "storage"
-      ],
-      "description": "Standalone AWS S3 protocol server",
-      "env": [{
-              "label": "Scality S3 access key",
-              "name": "SCALITY_ACCESS_KEY"
-          },
-          {
-              "label": "Scality S3 secret key",
-              "name": "SCALITY_SECRET_KEY"
-          }
-      ],
-      "image": "scality/s3server",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/scality-s3.png",
-      "platform": "linux",
-      "ports": [
-          "8000/tcp"
-      ],
-      "title": "Scality S3",
-      "type": 1,
-      "volumes": [{
-              "container": "/usr/src/app/localData"
-          },
-          {
-              "container": "/usr/src/app/localMetadata"
-          }
-      ]
-    },
-    {
-      "categories": [
           "Log Management",
           "Monitoring"
       ],
@@ -262,23 +232,6 @@
     },
     {
       "categories": [
-          "CMS"
-      ],
-      "description": "A free and open-source CMS built on top of Zope",
-      "image": "plone:latest",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/plone.png",
-      "platform": "linux",
-      "ports": [
-          "8080/tcp"
-      ],
-      "title": "Plone",
-      "type": 1,
-      "volumes": [{
-          "container": "/data"
-      }]
-    },
-    {
-      "categories": [
           "portainer"
       ],
       "description": "Manage all the resources in your Swarm cluster",
@@ -291,66 +244,6 @@
       },
       "title": "Portainer Agent",
       "type": 2
-    },
-    {
-      "categories": [
-          "database"
-      ],
-      "description": "The most advanced open-source database",
-      "env": [{
-              "label": "Superuser",
-              "name": "POSTGRES_USER"
-          },
-          {
-              "label": "Superuser password",
-              "name": "POSTGRES_PASSWORD"
-          }
-      ],
-      "image": "postgres:latest",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
-      "platform": "linux",
-      "ports": [
-          "5432/tcp"
-      ],
-      "title": "PostgreSQL",
-      "type": 1,
-      "volumes": [{
-          "container": "/var/lib/postgresql/data"
-      }]
-    },
-    {
-      "categories": [
-          "database"
-      ],
-      "description": "Open-source in-memory data structure store",
-      "image": "redis:latest",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
-      "platform": "linux",
-      "ports": [
-          "6379/tcp"
-      ],
-      "title": "Redis",
-      "type": 1,
-      "volumes": [{
-          "container": "/data"
-      }]
-    },
-    {
-      "categories": [
-          "project-management"
-      ],
-      "description": "Open-source project management tool",
-      "image": "redmine:latest",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redmine.png",
-      "platform": "linux",
-      "ports": [
-          "3000/tcp"
-      ],
-      "title": "Redmine",
-      "type": 1,
-      "volumes": [{
-          "container": "/usr/src/redmine/files"
-      }]
     },
     {
       "categories": [
@@ -546,90 +439,6 @@
     },
     {
       "categories": [
-          "CMS"
-      ],
-      "description": "Open-source modular CMS",
-      "env": [{
-              "name": "express",
-              "set": "true"
-          },
-          {
-              "name": "install",
-              "set": "true"
-          },
-          {
-              "name": "CFENGINE",
-              "set": "lucee@4.5"
-          }
-      ],
-      "image": "ortussolutions/contentbox:latest",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ortussolutions-contentbox.png",
-      "platform": "linux",
-      "ports": [
-          "8080/tcp",
-          "8443/tcp"
-      ],
-      "title": "ContentBox",
-      "type": 1,
-      "volumes": [{
-              "container": "/data/contentbox/db"
-          },
-          {
-              "container": "/app/includes/shared/media"
-          }
-      ]
-    },
-    {
-      "categories": [
-          "database"
-      ],
-      "description": "An open-source distributed SQL database",
-      "image": "crate:latest",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cratedb.png",
-      "platform": "linux",
-      "ports": [
-          "4200/tcp",
-          "4300/tcp"
-      ],
-      "title": "CrateDB",
-      "type": 1,
-      "volumes": [{
-          "container": "/data"
-      }]
-    },
-    {
-      "categories": [
-          "Monitoring"
-      ],
-      "description": "Collect events and metrics",
-      "env": [{
-          "label": "Datadog API key",
-          "name": "DD_API_KEY"
-      }],
-      "image": "datadog/agent:latest",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/datadog_agent.png",
-      "platform": "linux",
-      "title": "Datadog agent",
-      "type": 1,
-      "volumes": [{
-              "bind": "/var/run/docker.sock",
-              "container": "/var/run/docker.sock",
-              "readonly": true
-          },
-          {
-              "bind": "/sys/fs/cgroup",
-              "container": "/host/sys/fs/cgroup",
-              "readonly": true
-          },
-          {
-              "bind": "/proc",
-              "container": "/host/proc",
-              "readonly": true
-          }
-      ]
-    },
-    {
-      "categories": [
           "database"
       ],
       "description": "Open-source search and analytics engine",
@@ -740,47 +549,6 @@
     },
     {
       "categories": [
-          "Other",
-          "Tools"
-      ],
-      "description": "This is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients*, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal..",
-      "image": "bitwardenrs/server:latest",
-      "logo": "https://raw.githubusercontent.com/mikestraney/portainer-templates/master/Images/bitwarden.png",
-      "name": "bitwardenrs",
-      "note": "This project is not associated with the Bitwarden project nor 8bit Solutions LLC.",
-      "platform": "linux",
-      "ports": [
-          ":80/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Bitwarden RS",
-      "type": 1,
-      "volumes": [{
-          "bind": "/portainer/Files/AppData/Config/Bitwarden-rs",
-          "container": "/config"
-      }]
-    },
-    {
-      "categories": [
-          "webserver"
-      ],
-      "description": "HTTP/2 web server with automatic HTTPS",
-      "image": "abiosoft/caddy:latest",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
-      "platform": "linux",
-      "ports": [
-          "80/tcp",
-          "443/tcp",
-          "2015/tcp"
-      ],
-      "title": "Caddy",
-      "type": 1,
-      "volumes": [{
-          "container": "/root/.caddy"
-      }]
-    },
-    {
-      "categories": [
           "database"
       ],
       "description": "CockroachDB cluster",
@@ -819,70 +587,6 @@
       "volumes": [{
           "container": "/cockroach/cockroach-data"
       }]
-    },
-    {
-      "categories": [
-          "Other",
-          "Tools"
-      ],
-      "description": "A web interface for managing docker containers with an emphasis on templating to provide 1 click deployments. Think of it like a decentralized app store for servers that anyone can make packages for.",
-      "image": "selfhostedpro/yacht:latest",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/Yacht/master/readme_media/Yacht_logo_1_dark.png",
-      "name": "yacht",
-      "platform": "linux",
-      "ports": [
-          "8001:8000/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Yacht",
-      "type": 1,
-      "volumes": [{
-              "bind": "yacht",
-              "container": "/config"
-          },
-          {
-              "bind": "/var/run/docker.sock",
-              "container": "/var/run/docker.sock"
-          }
-      ]
-    },
-    {
-      "categories": [
-          "Other",
-          "Downloaders"
-      ],
-      "description": "YoutubeDL-Material is a Material Design frontend for youtube-dl. It's coded using Angular 9 for the frontend, and Node.js on the backend.",
-      "image": "tzahi12345/youtubedl-material:latest",
-      "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/ytdlm.png",
-      "name": "youtubedl-material",
-      "platform": "linux",
-      "ports": [
-          "17442:17442/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "YouTubeDL-Material",
-      "type": 1,
-      "volumes": [{
-              "bind": "/portainer/Files/AppData/Config/YTDLM",
-              "container": "/app/appdata"
-          },
-          {
-              "bind": "/portainer/Files/AppData/Youtube/Video",
-              "container": "/app/video"
-          },
-          {
-              "bind": "/portainer/Files/AppData/Youtube/Subscriptions",
-              "container": "/app/subscriptions"
-          },
-          {
-              "bind": "/portainer/Files/AppData/Youtube/Users",
-              "container": "/app/users"
-          },
-          {
-              "bind": "/portainer/Files/AppData/Youtube/Audio",
-              "container": "/app/audio"
-          }
-      ]
     },
     {
       "categories": [
@@ -1018,38 +722,6 @@
       "volumes": [{
           "bind": "/portainer/Files/AppData/ProtonMail-Bridge",
           "container": "/root"
-      }]
-    },
-    {
-      "categories": [
-          "Downloaders",
-          "Video"
-      ],
-      "description": "Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Sonarr, Radarr, Lidarr, and Readarr offering complete management of your indexers with no per app Indexer setup required (we do it all).",
-      "env": [{
-              "default": "1000",
-              "label": "PUID",
-              "name": "PUID"
-          },
-          {
-              "default": "100",
-              "label": "PGID",
-              "name": "PGID"
-          }
-      ],
-      "image": "ghcr.io/linuxserver/prowlarr:develop",
-      "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/prowlarr.png",
-      "name": "prowlarr",
-      "platform": "linux",
-      "ports": [
-          "9696:9696/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Prowlarr",
-      "type": 1,
-      "volumes": [{
-          "bind": "/portainer/Files/AppData/Config/Prowlarr",
-          "container": "/config"
       }]
     },
     {
@@ -6896,66 +6568,6 @@
       ]
     },
     {
-      "category": [
-          "Other",
-          "Tools",
-          "Photo"
-      ],
-      "description": "Chevereto is a powerful and fast image hosting script that allows you to create your very own full featured image hosting website in just minutes. Please note that this offers only the free Chevereto version..",
-      "env": [{
-              "label": "PUID",
-              "name": "PUID",
-              "set": "1000"
-          },
-          {
-              "label": "PGID",
-              "name": "PGID",
-              "set": "1000"
-          },
-          {
-              "label": "CHEVERETO_DB_HOST",
-              "name": "CHEVERETO_DB_HOST",
-              "set": ""
-          },
-          {
-              "label": "CHEVERETO_DB_USERNAME",
-              "name": "CHEVERETO_DB_USERNAME",
-              "set": ""
-          },
-          {
-              "label": "CHEVERETO_DB_PASSWORD",
-              "name": "CHEVERETO_DB_PASSWORD",
-              "set": ""
-          },
-          {
-              "label": "CHEVERETO_DB_NAME",
-              "name": "CHEVERETO_DB_NAME",
-              "set": ""
-          },
-          {
-              "label": "CHEVERETO_DB_PREFIX",
-              "name": "CHEVERETO_DB_PREFIX",
-              "set": ""
-          },
-          {
-              "label": "TZ",
-              "name": "TZ",
-              "set": "America/Chicago"
-          }
-      ],
-      "image": "nmtan/chevereto:latest",
-      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/Chevereto.png",
-      "platform": "linux",
-      "ports": [
-          "80/tcp"
-      ],
-      "title": "Chevereto",
-      "type": 1,
-      "volumes": [{
-          "container": "/var/www/html/images"
-      }]
-    },
-    {
 			"type": 1,
 			"title": "Daapd",
 			"name": "Daapd",
@@ -7913,55 +7525,6 @@
 		},
     {
 			"type": 1,
-			"title": "Boinc",
-			"name": "Boinc",
-			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/boinc/config</p>",
-			"description": "[BOINC](https://boinc.berkeley.edu/) is a platform for high-throughput computing on a large scale (thousands or millions of computers). It can be used for volunteer computing (using consumer devices) or grid computing (using organizational resources). It supports virtualized, parallel, and GPU-based applications.",
-			"categories": [
-				"Research"
-			],
-			"platform": "linux",
-			"logo": "https://raw.githubusercontent.com/BOINC/boinc/master/doc/logo/boinc_logo_black.jpg",
-			"image": "linuxserver/boinc:latest",
-			"env": [
-				{
-					"name": "PUID",
-					"label": "PUID",
-					"default": "1024",
-					"description": "for UserID"
-				},
-				{
-					"name": "PGID",
-					"label": "PGID",
-					"default": "100",
-					"description": "for GroupID"
-				},
-				{
-					"name": "TZ",
-					"label": "TZ",
-					"default": "Americas/Chicago",
-					"description": "Specify a timezone to use for example Americas/Chicago"
-				},
-				{
-					"name": "PASSWORD",
-					"label": "PASSWORD",
-					"default": "",
-					"description": "Optionally set a password for the gui."
-				}
-			],
-			"ports": [
-				"8080:8080/tcp"
-			],
-			"volumes": [
-			{
-				"container": "/config",
-				"bind": "/volume1/docker/boinc/config"
-			}
-			],
-			"restart_policy": "unless-stopped"
-		},
-    {
-			"type": 1,
 			"title": "Blender",
 			"name": "Blender",
 			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/blender/config</p>",
@@ -8577,21 +8140,6 @@
     },
     {
       "type": 1,
-      "title": "Caddy",
-      "description": "Open-source web server with automatic HTTPS written in Go",
-      "categories": ["webserver"],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
-      "image": "caddy:latest",
-      "ports": ["80/tcp"],
-      "volumes": [
-        {
-          "container": "/data"
-        }
-      ]
-    },
-    {
-      "type": 1,
       "title": "MySQL",
       "description": "The most popular open-source database",
       "categories": ["database"],
@@ -8694,43 +8242,6 @@
     },
     {
       "type": 1,
-      "title": "Elasticsearch",
-      "description": "Open-source search and analytics engine",
-      "categories": ["database"],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/elasticsearch.png",
-      "image": "docker.elastic.co/elasticsearch/elasticsearch:7.15.1",
-      "ports": ["9200/tcp", "9300/tcp"],
-      "volumes": [
-        {
-          "container": "/usr/share/elasticsearch/data"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Gitlab CE",
-      "description": "Open-source end-to-end software development platform",
-      "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
-      "categories": ["development", "project-management"],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/gitlab_ce.png",
-      "image": "gitlab/gitlab-ce:latest",
-      "ports": ["80/tcp", "443/tcp", "22/tcp"],
-      "volumes": [
-        {
-          "container": "/etc/gitlab"
-        },
-        {
-          "container": "/var/log/gitlab"
-        },
-        {
-          "container": "/var/opt/gitlab"
-        }
-      ]
-    },
-    {
-      "type": 1,
       "title": "Minio",
       "description": "A distributed object storage server built for cloud applications and devops",
       "categories": ["storage"],
@@ -8795,33 +8306,6 @@
       "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
       "image": "microsoft/mssql-server-windows-developer:latest",
-      "ports": ["1433/tcp"],
-      "env": [
-        {
-          "name": "ACCEPT_EULA",
-          "default": "Y",
-          "preset": true
-        },
-        {
-          "name": "sa_password",
-          "label": "SA password"
-        }
-      ],
-      "volumes": [
-        {
-          "container": "C:/temp/"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "SQL Server Express",
-      "description": "Microsoft SQL Server Express for Windows containers",
-      "categories": ["database"],
-      "platform": "windows",
-      "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
-      "image": "microsoft/mssql-server-windows-express:latest",
       "ports": ["1433/tcp"],
       "env": [
         {
@@ -8921,27 +8405,25 @@
     },
     {
       "type": 1,
-      "title": "Joomla",
-      "description": "Another free and open-source CMS",
-      "categories": ["CMS"],
+      "title": "Homebridge",
+	  "description": "Bringing dockeriffic HomeKit support where there is none. Homebridge allows you to integrate with smart home devices that do not natively support HomeKit. There are over 2,000 Homebridge plugins supporting thousands of different smart accessories.",
+	  "note": "Make sure you run `mkdir -p /volume1/docker/homebridge` before running the app for the first time!",
+      "categories": ["home-automation,IoT"],
       "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png",
-      "image": "joomla:latest",
+      "logo": "https://developers.homebridge.io/assets/images/homebridge-color-round.svg",
+      "image": "oznu/homebridge:latest",
       "env": [
         {
-          "name": "JOOMLA_DB_HOST",
-          "label": "MySQL database host",
-          "type": "container"
-        },
-        {
-          "name": "JOOMLA_DB_PASSWORD",
-          "label": "Database password"
+          "name": "HOMEBRIDGE_CONFIG_UI_PORT",
+          "label": "homebridge ui",
+          "type": "port"
         }
       ],
-      "ports": ["80/tcp"],
+      "ports": [":8581/tcp"],
       "volumes": [
         {
-          "container": "/var/www/html"
+          "container": "/homebridge",
+		  "host": "/volume1/docker/homebridge"
         }
       ]
     },
@@ -9088,23 +8570,6 @@
     },
     {
       "type": 1,
-      "title": "CommandBox",
-      "description": "ColdFusion (CFML) CLI",
-      "categories": ["development"],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ortussolutions-commandbox.png",
-      "image": "ortussolutions/commandbox:latest",
-      "env": [
-        {
-          "name": "CFENGINE",
-          "default": "lucee@4.5",
-          "preset": true
-        }
-      ],
-      "ports": ["8080/tcp", "8443/tcp"]
-    },
-    {
-      "type": 1,
       "title": "ContentBox",
       "description": "Open-source modular CMS",
       "categories": ["CMS"],
@@ -9135,37 +8600,6 @@
         },
         {
           "container": "/app/includes/shared/media"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Dokku",
-      "description": "Dokku setup as a container",
-      "categories": ["PaaS"],
-      "platform": "linux",
-      "logo": "",
-      "image":"dokku/dokku",
-      "ports": ["22/tcp", "80/tcp", "443/tcp"],
-      "volumes": [{
-        "container": "/mnt/dokku",
-        "bind": "/var/lib/dokku"
-      },
-      {
-        "container": "/var/run/docker.sock",
-        "bind": "/var/run/docker.sock"
-      }],
-      "env":[
-        {
-          "name": "DOKKU_HOSTNAME",
-          "label": "Dokku hostname",
-          "description": "Global hostname to be registered by Dokku"
-        },
-        {
-          "name": "DOKKU_HOST_ROOT",
-          "label": "Dokku host root",
-          "default": "/var/lib/dokku/home/dokku",
-          "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'"
         }
       ]
     },
