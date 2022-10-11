@@ -33,33 +33,6 @@
     },
     {
       "categories": [
-          "Log Management",
-          "Monitoring"
-      ],
-      "description": "Collect logs, metrics and docker events",
-      "env": [{
-              "label": "Logs token",
-              "name": "LOGSENE_TOKEN"
-          },
-          {
-              "label": "SPM monitoring token",
-              "name": "SPM_TOKEN"
-          }
-      ],
-      "image": "sematext/sematext-agent-docker:latest",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/sematext_agent.png",
-      "name": "sematext-agent",
-      "platform": "linux",
-      "privileged": true,
-      "title": "Sematext Docker Agent",
-      "type": 1,
-      "volumes": [{
-          "bind": "/var/run/docker.sock",
-          "container": "/var/run/docker.sock"
-      }]
-    },
-    {
-      "categories": [
           "search-engine"
       ],
       "description": "Open-source enterprise search platform",
@@ -96,35 +69,8 @@
       "ports": [
           "1433/tcp"
       ],
-      "title": "SQL Server",
+      "title": "SQL Server on Linux",
       "type": 1
-    },
-    {
-      "categories": [
-          "database"
-      ],
-      "description": "Microsoft SQL Server Developer for Windows containers",
-      "env": [{
-              "name": "ACCEPT_EULA",
-              "set": "Y"
-          },
-          {
-              "label": "SA password",
-              "name": "sa_password"
-          }
-      ],
-      "image": "microsoft/mssql-server-windows-developer:latest",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
-      "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-      "platform": "windows",
-      "ports": [
-          "1433/tcp"
-      ],
-      "title": "SQL Server",
-      "type": 1,
-      "volumes": [{
-          "container": "C:/temp/"
-      }]
     },
     {
       "categories": [
@@ -5893,77 +5839,6 @@
 					"container": "/var/log/grafana"
 				}
 			]
-		},
-    {
-			"type": 1,
-			"categories": ["Management Utility Server"],
-			"title": "Snipe-it",
-			"name": "Snipe-it",
-			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/snipe-it/config</p>",
-			"description": "Snipe-it makes asset management easy. It was built by people solving real-world IT and asset management problems, and a solid UX has always been a top priority. Straightforward design and bulk actions mean getting things done faster.",
-			"platform": "linux",
-			"logo": "https://s3-us-west-2.amazonaws.com/linuxserver-docs/images/snipe-it-logo500x500.png",
-			"image": "linuxserver/snipe-it:latest",
-			"env": [
-				{
-					"name": "PUID",
-					"label": "PUID",
-					"default": "1024",
-					"description": "for GroupID"
-				},
-				{
-					"name": "PGID",
-					"label": "PGID",
-					"default": "100",
-					"description": "for UserID"
-				},
-				{
-					"name": "APP_URL",
-					"label": "APP_URL",
-					"default": "<hostname or ip>",
-					"description": "Hostname or IP and port if applicable IE <ip or hostname>:8080"
-				},
-				{
-					"name": "MYSQL_PORT_3306_TCP_ADDR",
-					"label": "MYSQL_PORT_3306_TCP_ADDR",
-					"default": "<mysql host>",
-					"description": "Mysql hostname or IP to use"
-				},
-				{
-					"name": "MYSQL_PORT_3306_TCP_PORT",
-					"label": "MYSQL_PORT_3306_TCP_PORT",
-					"default": "<mysql port>",
-					"description": "Mysql port to use"
-				},
-				{
-					"name": "MYSQL_DATABASE",
-					"label": "MYSQL_DATABASE",
-					"default": "<mysql database>",
-					"description": "Mysql database to use"
-				},
-				{
-					"name": "MYSQL_USER",
-					"label": "MYSQL_USER",
-					"default": "<mysql pass>",
-					"description": "Mysql user to use"
-				},
-				{
-					"name": "MYSQL_PASSWORD",
-					"label": "MYSQL_PASSWORD",
-					"default": "changeme",
-					"description": "Mysql password to use"
-				}
-			],
-			"ports": [
-				"8080:80/tcp"
-			],
-			"volumes": [
-				{
-					"container": "/config",
-					"bind": "/volume1/docker/snipe-it/config"
-				}
-			],
-			"restart_policy": "unless-stopped"
 		},
     {
       "categories": ["Family App Server"],
