@@ -5,7 +5,7 @@
 		"categories": ["Web Tools, DNS Tools"],
 		"logo": "https://techexperiencemx.com/wp-content/uploads/2022/03/1-3.png",
 		"description": "This small Alpine Linux based Docker image will allow you to use the free CloudFlare DNS Service as a Dynamic DNS Provider (DDNS). This is a multi-arch image and will run on amd64, aarch64, and armhf devices, including the Raspberry Pi.",
-		"note": "Reference the docs on dockerhub https://hub.docker.com/r/oznu/cloudflare-ddns",
+		"note": "Reference the docs on dockerhub ",
 		"platform": "linux",
 		"image": "oznu/cloudflare-ddns:latest",
 		"title": "Docker CloudFlare DDNS",
@@ -32,8 +32,7 @@
 			"label": "CF_PROXIED",
 			"name": "Proxied",
 			"description": "Set to true to make traffic go through the CloudFlare CDN. Defaults to false."
-		}
-	]	
+		}]
 	},
 	{
 		"categories": ["home-automation,IoT"],
@@ -600,6 +599,25 @@
       "stackfile": "https://raw.githubusercontent.com/mikestraney/portainer-templates/master/stacks/cockroachdb/edge/docker-stack.yml",
       "title": "CockroachDB",
       "type": 4
+    },
+    {
+      "categories": [
+          "database"
+      ],
+      "command": "start --insecure",
+      "description": "An open-source, survivable, strongly consistent, scale-out SQL database",
+      "image": "cockroachdb/cockroach:latest",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
+      "platform": "linux",
+      "ports": [
+          "26257/tcp",
+          "8080/tcp"
+      ],
+      "title": "CockroachDB",
+      "type": 1,
+      "volumes": [{
+          "container": "/cockroach/cockroach-data"
+      }]
     },
     {
       "categories": [
