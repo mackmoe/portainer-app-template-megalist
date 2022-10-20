@@ -12,20 +12,17 @@
 		"type": 1,
 		"env": [{
 			"label": "API Key",
-			"name": "CF_API_KEY",
-			"set": "eldxua7v07q4u4ma58hlx0yva",
+			"name": "API_KEY",
 			"description": "Your CloudFlare scoped API token (Required)"
 		},
 		{
 			"label": "CF_ZONE",
 			"name": "Zone",
-			"set": "u11c49cfs8dapuqfdvyz4mhuf",
 			"description": "The DNS zone that DDNS updates should be applied to (Required)"
 		},
 		{
 			"label": "CF_SUBDOMAIN",
 			"name": "Subdomain",
-			"set": "sc7q1wq8fxb9fyn2p4rrcktvq",
 			"description": "A subdomain of the ZONE to write DNS changes to. If this is not supplied the root zone will be used."
 		},
 		{
