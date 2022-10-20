@@ -7,7 +7,7 @@
             ],
             "logo": "https://techexperiencemx.com/wp-content/uploads/2022/03/1-3.png",
             "description": "This small Alpine Linux based Docker image will allow you to use the free CloudFlare DNS Service as a Dynamic DNS Provider (DDNS). This is a multi-arch image and will run on amd64, aarch64, and armhf devices, including the Raspberry Pi.",
-            "note": "Reference the docs on dockerhub ",
+            "note": "Reference the docs on dockerhub https://hub.docker.com/r/oznu/cloudflare-ddns",
             "platform": "linux",
             "image": "oznu/cloudflare-ddns:latest",
             "title": "Docker CloudFlare DDNS",
@@ -15,17 +15,20 @@
             "env": [
                 {
                     "label": "API Key",
-                    "name": "API_KEY",
+                    "name": "CF_API_KEY",
+                    "set": "eldxua7v07q4u4ma58hlx0yva",
                     "description": "Your CloudFlare scoped API token (Required)"
                 },
                 {
                     "label": "CF_ZONE",
                     "name": "Zone",
+                    "set": "u11c49cfs8dapuqfdvyz4mhuf",
                     "description": "The DNS zone that DDNS updates should be applied to (Required)"
                 },
                 {
                     "label": "CF_SUBDOMAIN",
                     "name": "Subdomain",
+                    "set": "sc7q1wq8fxb9fyn2p4rrcktvq",
                     "description": "A subdomain of the ZONE to write DNS changes to. If this is not supplied the root zone will be used."
                 },
                 {
@@ -654,27 +657,6 @@
             "stackfile": "https://raw.githubusercontent.com/mikestraney/portainer-templates/master/stacks/cockroachdb/edge/docker-stack.yml",
             "title": "CockroachDB",
             "type": 4
-        },
-        {
-            "categories": [
-                "database"
-            ],
-            "command": "start --insecure",
-            "description": "An open-source, survivable, strongly consistent, scale-out SQL database",
-            "image": "cockroachdb/cockroach:latest",
-            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
-            "platform": "linux",
-            "ports": [
-                "26257/tcp",
-                "8080/tcp"
-            ],
-            "title": "CockroachDB",
-            "type": 1,
-            "volumes": [
-                {
-                    "container": "/cockroach/cockroach-data"
-                }
-            ]
         },
         {
             "categories": [
