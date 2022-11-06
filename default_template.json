@@ -32,6 +32,32 @@
         }]
       },
       {
+	"categories": [
+	     "streaming", "Media"
+	],
+	"description": "Radarr - A fork of Sonarr to work with movies à la Couchpotato.",
+	"image": "linuxserver/radarr:4.2.4",
+	"logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/radarr.png",
+        "name": "Radarr",
+        "platform": "linux",
+        "privileged": true,
+        "title": "Radarr",
+        "type": 1,
+        "volumes": [{
+            "bind": "/MediaLib/Media/downloads",
+            "container": "/downloads"
+	  },
+	  {
+            "bind": "/MediaLib/Media",
+            "container": "/media"
+	  },
+	  {
+            "bind": "/volume1/docker/radarrr",
+            "container": "/config"
+	  }
+        ]
+      },
+      {
         "categories": [
             "Log Management",
             "Monitoring"
@@ -2663,7 +2689,7 @@
               "description": "[Sickchill](https://github.com/SickChill/SickChill) is an Automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.",
               "platform": "linux",
               "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/sickchill-banner.png",
-              "image": "linuxserver/sickchill:latest",
+              "image": "linuxserver/sickchill:2022.10.13",
               "env": [
                   {
                       "name": "PUID",
@@ -2711,7 +2737,7 @@
               "description": "[SickGear](https://github.com/sickgear/sickgear) provides management of TV shows and/or Anime, it detects new episodes, links downloader apps, and more.. For more information on SickGear visit their website and check it out: https://github.com/SickGear/SickGear",
               "platform": "linux",
               "logo": "https://raw.githubusercontent.com/wiki/SickGear/SickGear.Wiki/images/SickGearLogo.png",
-              "image": "linuxserver/sickgear:latest",
+              "image": "linuxserver/sickgear:2022.10.13",
               "env": [
                   {
                       "name": "PUID",
