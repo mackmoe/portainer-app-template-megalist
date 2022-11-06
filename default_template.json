@@ -49,7 +49,7 @@
 	  },
 	  {
             "bind": "/MediaLib/Media",
-            "container": "/media"
+            "container": "/movies"
 	  },
 	  {
             "bind": "/volume1/docker/radarrr",
