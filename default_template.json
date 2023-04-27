@@ -26,7 +26,31 @@
         "restart_policy": "unless-stopped",
         "hostname": "doozle",
         "platform": "linux",
-        "categories": ["docker", "toolkit"]
+        "categories": ["docker", "toolkit", "webUI"]
+      },
+      {
+        "type": 3,
+        "title": "Portainer",
+        "description": "Web UI for manageing containerized applications with Docker.",
+        "administrator-only": false,
+        "image": "portainer/portainer-ee:latest",
+        "name": "portainer",
+        "logo": "https://raw.githubusercontent.com/portainer/portainer/develop/app/assets/ico/android-chrome-192x192.png",
+        "volumes": [{
+            "container": "/var/run/docker.sock",
+            "bind": "/var/run/docker.sock"
+        },
+        {
+            "container": "/data",
+            "bind": "/data/compose/portainer"
+        }],
+        "ports": ["32772:9000"],
+        "privileged": true,
+        "restart_policy": "unless-stopped",
+        "hostname": "portainer",
+        "note": "This is the primary means to control docker so, run this template first.",
+        "platform": "linux",
+        "categories": ["docker", "toolkit", "webUI"]
       }
     ]
   }
