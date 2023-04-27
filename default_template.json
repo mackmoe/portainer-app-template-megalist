@@ -63,6 +63,19 @@
         },
         "platform": "linux",
         "categories": ["blog", "open-source"]
+      },
+      {
+        "type": 1,
+        "title": "Homer",
+        "description": "This is for my self hosted dashboard project.",
+        "administrator-only": false,
+        "logo": "https://raw.githubusercontent.com//bastienwirtz/homer/main/public/logo.png",
+        "repository": {
+            "url": "https://github.com/mackmoe/custom-compose-stacks",
+            "stackfile": "dashboards/homer/docker-compose.yml"
+        },
+        "platform": "linux",
+        "categories": ["dashboard", "webUI"]
       }
     ]
   }
