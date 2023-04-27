@@ -51,6 +51,30 @@
         "note": "This is the primary means to control docker so, run this template first.",
         "platform": "linux",
         "categories": ["docker", "toolkit", "webUI"]
+      },
+      {
+        "type": 3,
+        "title": "",
+        "description": "",
+        "administrator-only": false,
+        "image": "",
+        "name": "",
+        "logo": "",
+        "volumes": [{
+            "container": "",
+            "bind": ""
+        },
+        {
+            "container": "",
+            "bind": ""
+        }],
+        "ports": ["",""],
+        "privileged": true,
+        "restart_policy": "unless-stopped",
+        "hostname": "",
+        "note": "",
+        "platform": "",
+        "categories": ["", "", ""]
       }
     ]
   }
