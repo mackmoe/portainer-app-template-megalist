@@ -54,27 +54,16 @@
       },
       {
         "type": 3,
-        "title": "",
-        "description": "",
+        "title": "Ghost Blog",
+        "description": "This is for my ghost blog at https://ghost.molovestoshare.com",
         "administrator-only": false,
-        "image": "",
-        "name": "",
-        "logo": "",
-        "volumes": [{
-            "container": "",
-            "bind": ""
-        },
-        {
-            "container": "",
-            "bind": ""
-        }],
-        "ports": ["",""],
-        "privileged": true,
-        "restart_policy": "unless-stopped",
-        "hostname": "",
-        "note": "",
-        "platform": "",
-        "categories": ["", "", ""]
+        "image": "ghost:latest",
+        "name": "molo-ghost-blog",
+        "logo": "https://raw.githubusercontent.com/TryGhost/Ghost/main/ghost/admin/public/assets/img/logos/orb-pink-3.png",
+        "repository": {
+            "url": "https://github.com/mackmoe/custom-compose-stacks",
+            "stackfile": "custom-compose-stacks/blogs/ghost/docker-compose.yml"
+        }
       }
     ]
   }
