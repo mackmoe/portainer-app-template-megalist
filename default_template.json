@@ -2,7 +2,7 @@
     "version": "2",
     "templates": [
       {
-        "type": 3,
+        "type": 1,
         "title": "doozle",
         "description": "Live Container Logs, simple and elegant.",
         "image": "amir20/dozzle:latest",
@@ -29,7 +29,7 @@
         "categories": ["docker", "toolkit", "webUI"]
       },
       {
-        "type": 3,
+        "type": 1,
         "title": "Portainer",
         "description": "Web UI for manageing containerized applications with Docker.",
         "administrator-only": false,
@@ -53,17 +53,30 @@
         "categories": ["docker", "toolkit", "webUI"]
       },
       {
-        "type": 3,
+        "type": 1,
         "title": "Ghost Blog",
-        "description": "This is for my ghost blog at https://ghost.molovestoshare.com",
+        "description": "This is for my self-hosted ghost blog.",
         "administrator-only": false,
-        "image": "ghost:latest",
-        "name": "molo-ghost-blog",
         "logo": "https://raw.githubusercontent.com/TryGhost/Ghost/main/ghost/admin/public/assets/img/logos/orb-pink-3.png",
         "repository": {
             "url": "https://github.com/mackmoe/custom-compose-stacks",
             "stackfile": "custom-compose-stacks/blogs/ghost/docker-compose.yml"
-        }
+        },
+        "platform": "linux",
+        "categories": ["blog", "open-source"]
+      },
+      {
+        "type": 1,
+        "title": "Wordpress Blog",
+        "description": "This is for my bae's wordpress blog we host.",
+        "administrator-only": false,
+        "logo": "https://avatars.githubusercontent.com/u/276006?s=200&v=4",
+        "repository": {
+            "url": "https://github.com/mackmoe/custom-compose-stacks",
+            "stackfile": "custom-compose-stacks/blogs/wordpress/docker-compose.yml"
+        },
+        "platform": "linux",
+        "categories": ["blog", "open-source"]
       }
     ]
   }
