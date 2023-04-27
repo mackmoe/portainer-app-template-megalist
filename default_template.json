@@ -4,6 +4,7 @@
       {
         "type": 1,
         "title": "doozle",
+        "hostname": "doozle",
         "description": "Live Container Logs, simple and elegant.",
         "image": "amir20/dozzle:latest",
         "administrator-only": false,
@@ -11,10 +12,8 @@
         "logo": "https://raw.githubusercontent.com/amir20/dozzle/master/assets/favicon.svg",
          "env": [{
             "name": "DOZZLE_ADDR",
-            "label": "Application ip:port",
-            "default": "0.0.0.0:8888",
-            "preset": true,
-            "description": "Needed for daemon/svc."
+            "label": "DOZZLE_ADDR",
+            "default": "0.0.0.0:8888"
          }
         ],
         "volumes": [{
@@ -24,7 +23,6 @@
         "ports": ["9999:8888"],
         "privileged": true,
         "restart_policy": "unless-stopped",
-        "hostname": "doozle",
         "platform": "linux",
         "categories": ["docker", "toolkit", "webUI"]
       },
