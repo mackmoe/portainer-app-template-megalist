@@ -9,7 +9,7 @@
         "logo": "https://raw.githubusercontent.com/amir20/dozzle/master/assets/favicon.svg",
         "repository": {
             "url": "https://github.com/mackmoe/custom-compose-stacks",
-            "stackfile": "custom-compose-stacks/blogs/ghost/docker-compose.yml"
+            "stackfile": "management-tools/doozle/docker-compose.yml"
       },
         "platform": "linux",
         "categories": ["docker", "toolkit", "webUI"]
@@ -46,7 +46,7 @@
         "logo": "https://raw.githubusercontent.com/TryGhost/Ghost/main/ghost/admin/public/assets/img/logos/orb-pink-3.png",
         "repository": {
             "url": "https://github.com/mackmoe/custom-compose-stacks",
-            "stackfile": "custom-compose-stacks/blogs/ghost/docker-compose.yml"
+            "stackfile": "blogs/ghost/docker-compose.yml"
         },
         "platform": "linux",
         "categories": ["blog", "open-source"]
@@ -59,7 +59,7 @@
         "logo": "https://avatars.githubusercontent.com/u/276006?s=200&v=4",
         "repository": {
             "url": "https://github.com/mackmoe/custom-compose-stacks",
-            "stackfile": "custom-compose-stacks/blogs/wordpress/docker-compose.yml"
+            "stackfile": "blogs/wordpress/docker-compose.yml"
         },
         "platform": "linux",
         "categories": ["blog", "open-source"]
