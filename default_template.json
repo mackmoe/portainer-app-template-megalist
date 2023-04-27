@@ -3,25 +3,14 @@
     "templates": [
       {
         "type": 1,
-        "title": "doozle",
-        "hostname": "doozle",
+        "title": "Doozle",
         "description": "Live Container Logs, simple and elegant.",
-        "image": "amir20/dozzle:latest",
         "administrator-only": false,
-        "name": "doozle",
         "logo": "https://raw.githubusercontent.com/amir20/dozzle/master/assets/favicon.svg",
-         "env": [{
-            "name": "DOZZLE_ADDR",
-            "label": "DOZZLE_ADDR"
-         }
-        ],
-        "volumes": [{
-            "container": "/var/run/docker.sock",
-            "bind": "/var/run/docker.sock"
-        }],
-        "ports": ["9999:8888"],
-        "privileged": true,
-        "restart_policy": "unless-stopped",
+        "repository": {
+            "url": "https://github.com/mackmoe/custom-compose-stacks",
+            "stackfile": "custom-compose-stacks/blogs/ghost/docker-compose.yml"
+      },
         "platform": "linux",
         "categories": ["docker", "toolkit", "webUI"]
       },
