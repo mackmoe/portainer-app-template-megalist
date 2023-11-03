@@ -3,6 +3,22 @@
     "templates": [
       {
         "categories": [
+            "Monitoring"
+        ],
+        "description": "Uptime Kuma is an easy-to-use self-hosted monitoring tool",
+        "image": "louislam/uptime-kuma",
+        "logo": "https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg",
+        "platform": "linux",
+        "ports": [
+            "3001:3001"
+        ],
+        "title": "Uptime Kuma",
+        "type": 1,
+        "volumes": [{
+            "container": "/app/data"
+        }]
+      }, {
+        "categories": [
             "streaming"
         ],
         "description": "Streaming media server",
